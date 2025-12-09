@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jonathan English – Final Leadership Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 42, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      color: #9ca3af;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: #38bdf8;
+      background: #020617;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr);
+      gap: 1.75rem;
+      margin-bottom: 2.5rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p.lead {
+      color: #9ca3af;
+      margin-bottom: 0.85rem;
+      font-size: 0.98rem;
+    }
+
+    .meta-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .meta-item {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #1f2937;
+    }
+
+    .headshot-card {
+      background: #020617;
+      border-radius: 1.25rem;
+      border: 1px solid #1f2937;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .headshot-card img {
+      width: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+      margin-bottom: 0.75rem;
+    }
+
+    .headshot-card h2 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .headshot-card p {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 0.75rem;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #38bdf8;
+      background: #0b1120;
+      color: #e5e7eb;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn.secondary {
+      border-color: #4b5563;
+      color: #9ca3af;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 1.25rem 1.1rem 1.4rem;
+      border-radius: 1.5rem;
+      background: #020617;
+      border: 1px solid #1f2937;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.35rem;
+    }
+
+    section h3 {
+      font-size: 1.05rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0.15rem;
+    }
+
+    section p {
+      font-size: 0.94rem;
+      color: #d1d5db;
+      margin-top: 0.35rem;
+    }
+
+    section ul {
+      margin-left: 1.1rem;
+      margin-top: 0.3rem;
+      font-size: 0.94rem;
+      color: #d1d5db;
+    }
+
+    section li {
+      margin-bottom: 0.15rem;
+    }
+
+    .pill-label {
+      font-size: 0.75rem;
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      color: #9ca3af;
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      border-top: 1px solid #1f2937;
+      padding: 1.5rem 1.25rem 2rem;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <div class="nav-title">Jonathan English</div>
+        <div class="tag">MGMT 316 Final Portfolio</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#executive-summary">Executive Summary</a>
+        <a href="#mission-vision">Mission &amp; Vision</a>
+        <a href="#resume">Résumé</a>
+        <a href="#linkedin">LinkedIn</a>
+        <a href="#smart-goals">S.M.A.R.T. Goals</a>
+        <a href="#team-feedback">Team Feedback</a>
+        <a href="#journals">Journals</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div>
+        <h1>Final Leadership Portfolio</h1>
+        <p class="lead">
+          A comprehensive look at my growth this semester through goal setting, reflection,
+          feedback, and intentional self-management.
+        </p>
+        <p class="lead">
+          This portfolio brings together my executive summary, mission and vision, résumé,
+          LinkedIn profile, S.M.A.R.T. goal progress, team feedback, and journals from MGMT 316.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-item">Chapman University</div>
+          <div class="meta-item">MGMT 316 – Leadership</div>
+          <div class="meta-item">Fall Semester</div>
+        </div>
+      </div>
+      <div class="headshot-card">
+        <!-- Replace headshot.jpg with your actual file name -->
+        <img src="headshot.jpg" alt="Professional headshot of Jonathan English" />
+        <h2>Jonathan English</h2>
+        <p>Business student · Student-athlete · Aspiring business &amp; economics professional</p>
+        <div class="button-row">
+          <a class="btn" href="#linkedin">View LinkedIn</a>
+          <a class="btn secondary" href="#resume">View Résumé</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section id="executive-summary">
+      <span class="pill-label">Executive Summary</span>
+      <h2>Semester Growth, Key Takeaways, and Future Goals</h2>
+      <p>
+        This semester in MGMT 316 pushed me to treat my life like a manager treats an organization:
+        with clear goals, intentional plans, and constant course-correction. I began with three
+        S.M.A.R.T. (specific, measurable, achievable, relevant, time-based) goals around my career,
+        social habits, and physical health. Professionally, I committed to pursuing an
+        economics-related internship and using Chapman’s resources, LinkedIn, and networking to
+        make that happen. Personally, I set the goal of cutting back on bars and fraternity parties
+        to one planned night out per week. Physically, I aimed to gain five pounds of lean muscle
+        through structured lifting and nutrition.
+      </p>
+      <p>
+        As the semester unfolded, those goals forced me to grow. I learned that sending online
+        applications was not enough; real progress came from conversations with professors,
+        classmates, alumni, and recruiters, so I built a weekly system for targeted applications and
+        deliberate “human touchpoints.” I also refined my social goal by scheduling nights out in
+        advance, setting curfews, and tracking my next-day energy and focus so I could see the
+        impact of my choices. A broken hand mid-semester forced me to rethink my fitness plan and
+        pivot from muscle gain to maintaining strength and health with lower-body training, machines,
+        cardio, and better nutrition.
+      </p>
+      <p>
+        Looking ahead, I am carrying these lessons forward. I now know I can design simple systems
+        that keep me consistent even when life gets messy. My next steps are to secure a strong
+        internship, continue limiting social nights to protect my performance, and reset my
+        post-injury strength goals once my cast is removed. This course showed me that effective
+        management is really self-leadership: planning, organizing, leading, and controlling my own
+        life so that I can show up as a better student, athlete, teammate, and future business
+        professional.
+      </p>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section id="mission-vision">
+      <span class="pill-label">Mission &amp; Vision</span>
+      <h2>Who I Am Becoming as a Leader</h2>
+      <h3>Mission Statement</h3>
+      <p>
+        I strive to live with integrity, curiosity, and resilience. I want to use my strengths in
+        leadership and creativity to positively impact the people and environments around me and to
+        continuously grow into a better human being.
+      </p>
+
+      <h3>Vision Statement</h3>
+      <p>
+        My vision is to build a life where I lead with intention, inspire others, and create
+        experiences that foster growth, connection, and sustainable change for myself and the people
+        I encounter.
+      </p>
+
+      <h3>Core Values in Action</h3>
+      <p>
+        These values shaped how I approached my goals this semester. Integrity guided my decision to
+        limit partying and prioritize long-term health over short-term fun. Curiosity pushed me to
+        explore internships, ask better questions, and seek feedback. Resilience showed up when my
+        injury disrupted my training plan—I chose to adapt instead of quit. Together, these values
+        define the kind of leader I want to become: someone who unites people, learns from setbacks,
+        and keeps moving toward meaningful objectives.
+      </p>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume">
+      <span class="pill-label">Résumé</span>
+      <h2>Professional Profile</h2>
+      <p>
+        My résumé reflects the progress behind this portfolio—blending academics, leadership,
+        athletics, and early professional experience. Throughout this semester I refined my résumé
+        to better highlight economics and business-related roles, tightened my bullet points, and
+        aligned my story with the internships I am pursuing in finance, policy, and business
+        analysis.
+      </p>
+      <p>
+        It showcases:
+      </p>
+      <ul>
+        <li>Coursework and projects that build analytical and problem-solving skills</li>
+        <li>Campus and fraternity leadership roles that demonstrate responsibility and teamwork</li>
+        <li>Athletic experience that reinforces discipline, resilience, and time management</li>
+        <li>An active pursuit of an economics-related internship for winter or summer interterm</li>
+      </ul>
+      <p>
+        You can upload your most recent résumé as a PDF in this GitHub repository and link it here,
+        or recreate the sections directly on this page.
+      </p>
+      <!-- Example link – update resume.pdf to your actual file name if you add it -->
+      <p><strong>Download résumé:</strong> <a href="resume.pdf">resume.pdf</a> (update this link if needed)</p>
+    </section>
+
+    <!-- LINKEDIN -->
+    <section id="linkedin">
+      <span class="pill-label">LinkedIn Profile</span>
+      <h2>Extending My Professional Presence</h2>
+      <p>
+        My LinkedIn profile extends this portfolio into the professional world. It features a
+        polished headshot, a concise summary of who I am as a student-athlete and aspiring business
+        professional, and a growing record of my experience, skills, and accomplishments. I actively
+        use LinkedIn to research companies, follow industry news, and reach out to professionals for
+        informational conversations and internship opportunities.
+      </p>
+      <p>
+        On LinkedIn I focus on:
+      </p>
+      <ul>
+        <li>Clearly communicating my interest in economics, finance, and business analysis</li>
+        <li>Showcasing leadership roles, team experiences, and athletic commitment</li>
+        <li>Sharing and engaging with content that reflects curiosity and professional growth</li>
+        <li>
+          Building a meaningful network of classmates, professors, alumni, and industry contacts
+        </li>
+      </ul>
+      <p>
+        <strong>Visit my profile:</strong>
+        <a href="https://www.linkedin.com/in/jonathan-english-19a87b304" target="_blank">
+          linkedin.com/in/jonathan-english-19a87b304
+        </a>
+      </p>
+    </section>
+
+    <!-- SMART GOALS -->
+    <section id="smart-goals">
+      <span class="pill-label">S.M.A.R.T. Goal Progress</span>
+      <h2>Goals, Progress, and What I Learned</h2>
+
+      <h3>Professional Goal – Economics Internship</h3>
+      <p>
+        <strong>Original goal:</strong> Secure an internship in economics (with a focus on finance,
+        policy, or business analysis) by applying to targeted roles during winter or summer
+        interterm, using Chapman resources, networking, and online platforms.
+      </p>
+      <p>
+        <strong>Progress and insight:</strong> I discovered that volume alone does not create
+        opportunities—relationships do. Early on I mostly clicked “apply,” but the biggest momentum
+        came when I reached out to professors and alumni. This led me to redesign my plan into a
+        weekly system: two tailored applications and three meaningful touchpoints each week, plus a
+        running bank of short stories I can use in interviews. I am still in the process of landing
+        the internship, but I’m ending the semester with stronger networking habits and a clear
+        structure to keep executing.
+      </p>
+
+      <h3>Personal Goal – Social Balance</h3>
+      <p>
+        <strong>Original goal:</strong> Limit going to bars and fraternity parties to one planned
+        night out per week, tracking outings on my phone to stay accountable and protect my health,
+        finances, and focus.
+      </p>
+      <p>
+        <strong>Progress and insight:</strong> Most weeks I hit the target, especially when I chose
+        my night in advance. The hardest times were high-event weekends, when “one night” could
+        easily become a whole weekend. In response, I tightened the rule: pick my night by
+        Wednesday, set an end time, and add one “non-party” hangout such as coffee, the gym, or
+        dinner with a friend. I now track my next-day energy, focus, and productivity, which gives
+        me evidence that smarter choices translate into better performance.
+      </p>
+
+      <h3>Physical Goal – Strength and Injury Management</h3>
+      <p>
+        <strong>Original goal:</strong> Gain five pounds of lean muscle by December using
+        progressive overload in the gym, weekly weigh-ins, and a high-protein diet.
+      </p>
+      <p>
+        <strong>Progress and insight:</strong> A broken hand in early October forced me to pivot
+        from muscle gain to injury-smart training. Instead of abandoning the goal, I reframed
+        success as maintaining fitness: focusing on lower-body work, machines, cardio, and adequate
+        protein while my hand healed. I did not hit the original weight target, but I prevented
+        regression and protected my long-term health. This taught me that adapting goals to reality
+        is a strength, not a failure, and that discipline includes knowing when to adjust
+        expectations.
+      </p>
+    </section>
+
+    <!-- TEAM FEEDBACK -->
+    <section id="team-feedback">
+      <span class="pill-label">Team Feedback Summary</span>
+      <h2>How Others See Me – and How I Responded</h2>
+      <p>
+        Throughout this course I received feedback from classmates and team members on how I show up
+        in group settings. Their comments highlighted several consistent strengths: reliability,
+        preparation, and a calm presence under pressure. Peers appreciated that I follow through on
+        commitments, contribute thoughtfully rather than talking just to talk, and help keep the
+        group organized and on track with deadlines. This connects strongly to my management focus
+        on planning and organizing—skills I also used to structure internship applications and track
+        my goals.
+      </p>
+      <p>
+        Feedback also pointed out growth areas that I have started working on. Teammates encouraged
+        me to speak up earlier in discussions, share my ideas with more confidence, and delegate
+        instead of taking on too much myself. Combined with my own reflections on leadership during
+        my injury and social-life changes, this pushed me to practice being more vocal, setting
+        clearer expectations, and being honest about my limits. Going forward, I plan to actively
+        ask for feedback during projects and to use it as a regular “control” step—just like in the
+        four functions of management—to keep improving how I lead and collaborate.
+      </p>
+    </section>
+
+    <!-- JOURNALS -->
+    <section id="journals">
+      <span class="pill-label">Journals</span>
+      <h2>Semester Journals and Key Insights</h2>
+      <p>
+        My journals document the thinking behind this portfolio. They show how my goals, values, and
+        strategies evolved throughout the semester.
+      </p>
+
+      <h3>Journal #1 – S.M.A.R.T. Goals</h3>
+      <p>
+        Established three S.M.A.R.T. goals: securing an economics-related internship, limiting
+        social nights out, and gaining lean muscle through structured training and nutrition.
+      </p>
+
+      <h3>Journal #2 – Mission and Vision Statement</h3>
+      <p>
+        Clarified my mission, vision, and core values of integrity, curiosity, resilience,
+        leadership, and creativity, and connected them to how I want to show up in school, work, and
+        life.
+      </p>
+
+      <h3>Journal #3 – Review Goals</h3>
+      <p>
+        Conducted a mid-semester check-in, refining strategies for internship applications, social
+        balance, and training systems, and identifying which habits were working and which needed to
+        change.
+      </p>
+
+      <h3>Journal #5 – Goal Evaluation</h3>
+      <p>
+        Evaluated my progress using the four functions of management (planning, organizing, leading,
+        controlling) and reflected on what I learned from successes, setbacks, and my injury. This
+        journal set the foundation for the executive summary and my future goals.
+      </p>
+
+      <p style="margin-top:0.7rem;">
+        You can attach the full PDF versions of these journals in this repository and link them
+        here, or submit them separately as required by the course.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Jonathan English · MGMT 316 Final Portfolio
+  </footer>
+
+  <script>
+    // set current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
